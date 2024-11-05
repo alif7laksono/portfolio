@@ -1,43 +1,52 @@
 "use client";
-
 import {
   FaXTwitter,
   FaGithub,
   FaInstagram,
-  FaRss,
   FaLinkedinIn,
 } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "../config";
 import { FC } from "react";
-import { FaTwitter } from "react-icons/fa";
-
 const YEAR = new Date().getFullYear();
 
 interface SocialLinkProps {
   href: string;
-  icon: FC;
+  icon: React.ElementType;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const SocialLink: FC<SocialLinkProps> = ({ href, icon: Icon }) => {
+const SocialLink: FC<SocialLinkProps> = ({ href, icon: Icon, onClick }) => {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={onClick}
+    >
       <Icon />
     </a>
   );
 };
 
 function SocialLinks() {
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(socialLinks.email.replace("mailto:", ""));
+    alert("Email address copied to clipboard!");
+  };
+
   return (
     <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={socialLinks.twitter} icon={FaXTwitter} />
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      <SocialLink href={socialLinks.email} icon={TbMailFilled} />
-      <a href="/rss.xml" target="_self">
-        <FaRss />
-      </a>
+      <SocialLink
+        href={socialLinks.email}
+        icon={TbMailFilled}
+        onClick={handleEmailClick} // Pass handleEmailClick here for the email link
+      />
     </div>
   );
 }
