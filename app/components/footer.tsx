@@ -18,12 +18,7 @@ interface SocialLinkProps {
 
 const SocialLink: FC<SocialLinkProps> = ({ href, icon: Icon, onClick }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={onClick}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
       <Icon />
     </a>
   );
@@ -55,12 +50,7 @@ export function Footer() {
   return (
     <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
       <time>© {YEAR}</time>{" "}
-      <a
-        className="no-underline"
-        href={socialLinks.twitter}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a className="no-underline" href="/" rel="noopener noreferrer">
         {metaData.title}
       </a>
       <style jsx>{`

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { metaData } from "../config";
 
 const navItems = {
-  "/frontend": { name: "Front End Projects" },
-  "/wordpress": { name: "Wordpress Projects" },
+  "/frontend": { name: "FE Projects" },
+  "/wordpress": { name: "WP Projects" },
   "/skills": { name: "Skills" },
 };
 
