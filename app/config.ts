@@ -1,9 +1,10 @@
 export const metaData = {
   baseUrl: "https://portfolio-chi-six-87.vercel.app/",
-  title: "Alif Laksono",
+  title: "Alif Wiji Laksono",
   name: "AlifLaksono",
   ogImage: "/opengraph-image.png",
-  description: "lorem ipsum.",
+  description:
+    "Alif Wiji Laksono, a Bachelor's degree holder in Information Systems, experienced WordPress developer, and aspiring front-end developer.",
 };
 
 export const socialLinks = {
