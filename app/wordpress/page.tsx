@@ -13,7 +13,7 @@ export default function Wordpress() {
         {wpProjects.map((project, index) => (
           <div
             key={index}
-            className="block group hover:opacity-80 transition-opacity duration-200"
+            className="block group transition-opacity duration-200 border-b-2 border-gray-700"
             aria-label={`View project ${project.title}`}
           >
             <div className="flex flex-col mb-10">
@@ -39,7 +39,6 @@ export default function Wordpress() {
               </p>
 
               <div className="mt-4">
-                {/* Demo Site Button (URL) */}
                 {project.url && (
                   <a
                     href={project.url}

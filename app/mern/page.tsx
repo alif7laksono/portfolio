@@ -14,7 +14,7 @@ export default function Mern() {
         {mernProjects.map((project, index) => (
           <div
             key={index}
-            className="block group hover:opacity-80 transition-opacity duration-200"
+            className="block group transition-opacity duration-200 border-b-2 border-gray-700"
             aria-label={`View project ${project.title}`}
           >
             <div className="flex flex-col mb-10">

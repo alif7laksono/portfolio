@@ -13,7 +13,7 @@ export default function Frontend() {
         {feProjects.map((project, index) => (
           <div
             key={index}
-            className="block group hover:opacity-80 transition-opacity duration-200"
+            className="block group transition-opacity duration-200 border-b-2 border-gray-700"
             aria-label={`View project ${project.title}`}
           >
             <div className="flex flex-col mb-10">
@@ -45,7 +45,7 @@ export default function Frontend() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                    className="inline-flex items-center px-4 py-2 border-2 border-white text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
                   >
                     Source Code
                   </a>

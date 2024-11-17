@@ -28,7 +28,7 @@ function SocialLinks() {
   const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     navigator.clipboard.writeText(socialLinks.email.replace("mailto:", ""));
-    alert("Email address copied to clipboard!");
+    alert("Email address : alif7laksono@gmail.com copied to clipboard!");
   };
 
   return (
