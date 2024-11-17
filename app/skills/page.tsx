@@ -3,11 +3,11 @@ import { skills } from "./skill-data";
 export default function Skills() {
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-gray-900 shadow-lg rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:bg-gray-800"
+            className="bg-transparent border-2 border-white shadow-lg rounded-lg p-6 text-center transition-transform transform hover:opacity-80"
           >
             <div className="flex justify-center items-center mb-2">
               {skill.icon}
