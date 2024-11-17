@@ -3,8 +3,8 @@ import { metaData } from "../config";
 
 const navItems = {
   "/frontend": { name: "FE Projects" },
-  "/wordpress": { name: "WP Projects" },
   "/mern": { name: "Mern Projects" },
+  "/wordpress": { name: "WP Projects" },
   "/skills": { name: "Skills" },
 };
 
