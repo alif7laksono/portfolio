@@ -16,6 +16,11 @@ export default function Home() {
           further grow my career and contribute to creating user-friendly web
           experiences.
         </p>
+        <p className="mt-10">
+          I am looking for entry-level front-end development roles, freelance
+          front-end opportunities, or any relevant jobs that would help me
+          advance my skills and contribute to impactful web projects.
+        </p>
       </div>
     </section>
   );
