@@ -39,7 +39,6 @@ export default function Mern() {
 
               {/* Demo Site and GitHub Buttons */}
               <div className="mt-4 space-x-4">
-                {/* GitHub Button (Source Code) */}
                 {project.github && (
                   <a
                     href={project.github}
