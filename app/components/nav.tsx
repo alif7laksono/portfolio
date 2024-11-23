@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { metaData } from "../config";
+import { usePathname } from "next/navigation";
 
 const navItems = {
   "/frontend": { name: "FE Projects" },
@@ -9,8 +11,10 @@ const navItems = {
 };
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <nav className="lg:mb-16 mb-12 py-5">
+    <nav className="lg:mb-16 mb-12 py-5 animate-fadeIn">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-3xl font-semibold tracking-tight">
@@ -22,12 +26,15 @@ export function Navbar() {
             <Link
               key={path}
               href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative font-semibold"
+              className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative font-semibold ${
+                pathname === path
+                  ? "active"
+                  : "text-neutral-600 dark:text-neutral-400"
+              }`}
             >
               {name}
             </Link>
           ))}
-          {/* <ThemeSwitch /> */}
         </div>
       </div>
     </nav>

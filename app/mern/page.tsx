@@ -7,7 +7,7 @@ export default function Mern() {
   );
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
+      <h1 className="mb-8 text-2xl font-extrabold tracking-tight animate-fadeIn">
         MERN Stack Projects
       </h1>
       <div className="space-y-6">
@@ -19,10 +19,10 @@ export default function Mern() {
           >
             <div className="flex flex-col mb-10">
               <div className="w-full flex flex-col space-y-2">
-                <span className="font-semibold tracking-tight text-lg">
+                <span className="font-semibold tracking-tight text-lg animate-fadeIn">
                   {`${index + 1}. ${project.title}`}
                 </span>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center animate-slideRight">
                   <span className="text-neutral-600 dark:text-neutral-400 text-sm">
                     {project.technologies}
                   </span>
@@ -33,12 +33,11 @@ export default function Mern() {
                   )}
                 </div>
               </div>
-              <p className="prose prose-neutral dark:prose-invert pt-3">
+              <p className="prose prose-neutral dark:prose-invert pt-3 animate-slideLeft">
                 {project.description}
               </p>
 
-              {/* Demo Site and GitHub Buttons */}
-              <div className="mt-4 space-x-4">
+              <div className="mt-4 flex space-x-4 animate-fadeIn">
                 {project.github && (
                   <a
                     href={project.github}
