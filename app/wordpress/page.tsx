@@ -30,7 +30,7 @@ export default function Wordpress() {
 
   return (
     <section>
-      <div className="flex justify-between gap-4 md:gap-6 items-center mb-2 md:mb-6">
+      <div className="flex justify-between gap-4 md:gap-6 items-center mb-6 md:mb-10">
         <h1 className="text-2xl font-extrabold tracking-tight animate-fadeIn">
           WordPress Projects
         </h1>
