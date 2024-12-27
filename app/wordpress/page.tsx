@@ -30,10 +30,7 @@ export default function Wordpress() {
 
   return (
     <section>
-      <div className="flex justify-center gap-4 md:gap-6 items-center mb-6 md:mb-10">
-        {/* <h1 className="text-2xl font-extrabold tracking-tight animate-fadeIn">
-          WordPress Projects
-        </h1> */}
+      <div className="flex justify-center md:justify-start gap-4 md:gap-6 mb-6 md:mb-10">
         <p className="capitalize">
           Total WordPress projects:{" "}
           <span className="font-bold">{wpProjects.length}</span>

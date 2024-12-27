@@ -30,15 +30,13 @@ export default function Frontend() {
 
   return (
     <section>
-      <div className="flex justify-center gap-4 md:gap-6 items-center mb-6 md:mb-10">
-        {/* <h1 className="text-2xl font-semibold text-left tracking-tight animate-fadeIn">
-          Front End Projects
-        </h1> */}
-        <p className="capitalize text-center">
+      <div className="flex justify-center md:justify-start gap-4 md:gap-6 mb-6 md:mb-10">
+        <p className="capitalize">
           Total FrontEnd projects:{" "}
           <span className="font-bold">{feProjects.length}</span>
         </p>
       </div>
+
       <div className="space-y-6">
         {displayedProjects.map((project, index) => (
           <div
