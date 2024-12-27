@@ -14,7 +14,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="lg:mb-16 mb-12 py-5 animate-fadeIn">
+    <nav className="lg:mb-16 mb-0 py-5 animate-fadeIn">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex flex-row mt-6 md:mt-0 justify-center md:justify-start">
           <Link
@@ -24,7 +24,7 @@ export function Navbar() {
             {metaData.title}
           </Link>
         </div>
-        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto justify-center items-center">
+        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto justify-center items-center border-y md:border-none border-white py-4">
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}

@@ -7,9 +7,9 @@ export default function Mern() {
   );
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-extrabold tracking-tight animate-fadeIn">
+      {/* <h1 className="mb-8 text-2xl font-extrabold tracking-tight animate-fadeIn">
         MERN Stack Projects
-      </h1>
+      </h1> */}
       <div className="space-y-6">
         {mernProjects.map((project, index) => (
           <div
