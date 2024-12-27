@@ -40,7 +40,7 @@ function SocialLinks() {
       <SocialLink
         href={socialLinks.email}
         icon={TbMailFilled}
-        onClick={handleEmailClick} // Pass handleEmailClick here for the email link
+        onClick={handleEmailClick}
       />
     </div>
   );
@@ -48,7 +48,7 @@ function SocialLinks() {
 
 export function Footer() {
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4] animate-fadeIn">
+    <small className="block lg:mt-24 mt-16 animate-fadeIn">
       <time>© {YEAR}</time>{" "}
       <a className="no-underline" href="/" rel="noopener noreferrer">
         {metaData.title}

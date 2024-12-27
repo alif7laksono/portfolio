@@ -99,7 +99,7 @@ export default function Frontend() {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-between mt-6">
+      <div className="flex justify-between items-center mt-6">
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
