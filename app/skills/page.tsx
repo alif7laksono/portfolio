@@ -12,8 +12,8 @@ export default function Skills() {
             <div className="flex justify-center items-center mb-2 animate-fadeIn">
               {skill.icon}
             </div>
-            <h2 className="text-xl font-semibold text-white animate-slideRight">{skill.name}</h2>
-            <p className="text-gray-400 animate-slideLeft">{skill.level}</p>
+            <h2 className="text-xl font-semibold text-white animate-slideDown">{skill.name}</h2>
+            <p className="text-gray-400 animate-slideUp">{skill.level}</p>
           </div>
         ))}
       </div>

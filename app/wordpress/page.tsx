@@ -1,27 +1,59 @@
+"use client";
+import React, { useState } from "react";
 import { projects } from "../data/project-data";
 
 export default function Wordpress() {
   const wpProjects = projects.filter(
     (project) => project.category === "wordpress"
   );
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 4;
+
+  const totalPages = Math.ceil(wpProjects.length / projectsPerPage);
+
+  const displayedProjects = wpProjects.slice(
+    (currentPage - 1) * projectsPerPage,
+    currentPage * projectsPerPage
+  );
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-extrabold tracking-tight animate-fadeIn">
-        WordPress Projects
-      </h1>
+      <div className="flex justify-between gap-4 md:gap-6 items-center mb-2 md:mb-6">
+        <h1 className="text-2xl font-extrabold tracking-tight animate-fadeIn">
+          WordPress Projects
+        </h1>
+        <p className="capitalize">
+          Total WordPress projects:{" "}
+          <span className="font-bold">{wpProjects.length}</span>
+        </p>
+      </div>
       <div className="space-y-6">
-        {wpProjects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div
-            key={index}
+            key={project.id || index} // Use a unique key if available
             className="block group transition-opacity duration-200 border-b-2 border-gray-700"
             aria-label={`View project ${project.title}`}
           >
             <div className="flex flex-col mb-10">
               <div className="w-full flex flex-col space-y-2">
                 <span className="font-semibold tracking-tight text-lg animate-fadeIn">
-                  {`${index + 1}. ${project.title}`}
+                  {`${(currentPage - 1) * projectsPerPage + index + 1}. ${
+                    project.title
+                  }`}
                 </span>
-                <div className="flex justify-between items-center animate-slideRight">
+                <div className="flex justify-between items-center animate-slideDown">
                   <span className="text-neutral-600 dark:text-neutral-400 text-sm">
                     {Array.isArray(project.technologies)
                       ? project.technologies.join(", ")
@@ -34,7 +66,7 @@ export default function Wordpress() {
                   )}
                 </div>
               </div>
-              <p className="prose prose-neutral dark:prose-invert pt-3 animate-slideLeft">
+              <p className="prose prose-neutral dark:prose-invert pt-3 animate-slideUp">
                 {project.description}
               </p>
 
@@ -53,6 +85,35 @@ export default function Wordpress() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-between mt-6">
+        <button
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 rounded-lg ${
+            currentPage === 1
+              ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+              : "bg-gray-800 text-white hover:bg-gray-700"
+          }`}
+        >
+          Previous
+        </button>
+        <span className="text-neutral-600 dark:text-neutral-400">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 rounded-lg ${
+            currentPage === totalPages
+              ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+              : "bg-gray-800 text-white hover:bg-gray-700"
+          }`}
+        >
+          Next
+        </button>
       </div>
     </section>
   );
