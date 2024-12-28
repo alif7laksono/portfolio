@@ -22,7 +22,7 @@ export function Navbar() {
         <div className="flex flex-row mt-6 md:mt-0 justify-center md:justify-start">
           <Link
             href="/"
-            className="text-3xl font-semibold tracking-tight text-center md:text-left"
+            className={`text-3xl font-semibold tracking-tight text-center md:text-left ${fonts.bodoni}`}
           >
             {metaData.title}
           </Link>
