@@ -144,7 +144,7 @@ export const projects: Project[] = [
     category: "wordpress",
     technologies: "WordPress, Astra, Elementor",
     description:
-      "A professionally crafted WordPress website for a welding workshop, combining a striking landing page, informative blog, and detailed contact section. The landing page highlights the workshop's services, expertise, and key projects, creating a strong first impression. The integrated blog allows the workshop to share insights, tips, and industry updates to engage their audience. Contact information is prominently displayed, ensuring potential clients can easily get in touch. Built with Elementor Pro, the website is fully responsive, customizable, and optimized for both desktop and mobile devices, offering an excellent user experience.",
+      "A professionally crafted WordPress website for a welding workshop, combining a striking landing page, informative blog, and detailed contact section. The landing page highlights the workshop's services, expertise, and key projects, creating a strong first impression. The integrated blog allows the workshop to share insights, tips, and industry updates to engage their audience.",
     url: "https://rezadasteel.com/",
   },
   {
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     category: "frontend",
     technologies: "Next.js, TypeScript, Tailwind CSS, ShadCN UI",
     description:
-      "A beautifully designed one-page wedding website theme created with Next.js, TypeScript, Tailwind CSS, and ShadCN UI. The theme features a sticky navbar for easy navigation, a responsive layout for optimal viewing on all devices, and a modern aesthetic tailored for wedding events. This template provides sections for showcasing event details, galleries, RSVP forms, and more, making it a perfect solution for couples or wedding planners looking to create an elegant online presence.",
+      "A beautifully designed one-page wedding website theme. The theme features a sticky navbar for easy navigation, a responsive layout for optimal viewing on all devices, and a modern aesthetic tailored for wedding events.",
     url: "https://pricelist-eta.vercel.app/roseandethan",
   },
   {
@@ -164,7 +164,17 @@ export const projects: Project[] = [
     category: "frontend",
     technologies: "Next.js, TypeScript, Tailwind CSS, ShadCN UI",
     description:
-      "A modern and responsive landing page designed for photography agencies, built with Next.js, TypeScript, Tailwind CSS, and ShadCN UI. The layout features a sticky header for seamless navigation, a gallery section to showcase stunning photography portfolios, and a sleek design to captivate potential clients. Optimized for all devices, this landing page is perfect for agencies looking to create a professional and visually appealing online presence.",
+      "A modern and responsive landing page designed for photography agencies. The layout features a sticky header for seamless navigation, a gallery section to showcase stunning photography portfolios. Optimized for all devices.",
     url: "https://pricelist-eta.vercel.app/portfolio",
+  },
+  {
+    id: 16,
+    title: "Responsive Wedding&Decoration Pricelist with Gallery page",
+    year: 2024,
+    category: "frontend",
+    technologies: "Next.js, TypeScript, Tailwind CSS",
+    description:
+      "A modern and fully responsive web application designed for wedding and decoration services. Built using Next.js, TypeScript, and Tailwind CSS, the application ensures fast performance, clean code structure, and a seamless user experience across all devices",
+    url: "https://rnita.vercel.app/",
   },
 ];
