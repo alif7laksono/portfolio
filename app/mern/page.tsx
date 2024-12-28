@@ -1,12 +1,13 @@
 import { projects } from "../data/project-data";
 import React from "react";
+import { fonts } from "../fonts/fonts";
 
 export default function Mern() {
   const mernProjects = projects.filter(
     (project) => project.category === "mern"
   );
   return (
-    <section>
+    <section className={`${fonts.montserrat}`}>
       {/* <h1 className="mb-8 text-2xl font-extrabold tracking-tight animate-fadeIn">
         MERN Stack Projects
       </h1> */}

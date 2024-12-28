@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { projects } from "../data/project-data";
+import { fonts } from "../fonts/fonts";
 
 export default function Frontend() {
   const feProjects = projects.filter(
@@ -29,7 +30,7 @@ export default function Frontend() {
   };
 
   return (
-    <section>
+    <section className={` ${fonts.montserrat}`}>
       <div className="flex justify-center md:justify-start gap-4 md:gap-6 mb-6 md:mb-10">
         <p className="capitalize">
           Total FrontEnd projects:{" "}
