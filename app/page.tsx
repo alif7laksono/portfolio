@@ -6,7 +6,7 @@ export default function Home() {
       <div className="prose prose-neutral">
         <p className="animate-slideDown">
           A Bachelor's Degree in Information Systems from Amikom University and
-          expertise in front-end development using{" "}
+          expertise in <span className="capitalize font-bold antialiased hover:subpixel-antialiased">front-end development</span> using{" "}
           <span className="font-bold antialiased hover:subpixel-antialiased">HTML, CSS, JavaScript, Tailwind CSS</span>{" "}
           and <span className="font-bold antialiased hover:subpixel-antialiased">TypeScript</span> , along with
           frameworks like <span className="font-bold antialiased hover:subpixel-antialiased">React.Js</span> and{" "}
