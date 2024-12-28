@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { metaData } from "../config";
 import { usePathname } from "next/navigation";
+import { fonts } from "@/app/fonts/fonts";
 
 const navItems = {
   "/frontend": { name: "FrontEnd" },
@@ -15,7 +16,9 @@ export function Navbar() {
 
   return (
     <nav className="lg:mb-16 mb-0 py-5 animate-fadeIn">
-      <div className="flex flex-col md:flex-row md:items-center justify-between">
+      <div
+        className={`flex flex-col md:flex-row md:items-center justify-between border-b border-gray-600 ${fonts.montserrat}`}
+      >
         <div className="flex flex-row mt-6 md:mt-0 justify-center md:justify-start">
           <Link
             href="/"
