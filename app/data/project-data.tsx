@@ -185,6 +185,7 @@ export const projects: Project[] = [
     technologies: "Next.js, TypeScript, Tailwind CSS, ShadcnUI",
     description:
       "A modern and fully responsive free and reusable components shadcnui. Create stunning web interfaces with ready-to-use components.",
+    github: "https://github.com/alif7laksono/shadcn-ui-nextjs-components",
     url: "https://shadcn-ui-nextjs-components.vercel.app/",
   },
 ];
