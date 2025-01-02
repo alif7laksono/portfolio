@@ -177,4 +177,14 @@ export const projects: Project[] = [
       "A modern and fully responsive web application designed for wedding and decoration services. Built using Next.js, TypeScript, and Tailwind CSS, the application ensures fast performance, clean code structure, and a seamless user experience across all devices",
     url: "https://rnita.vercel.app/",
   },
+  {
+    id: 17,
+    title: "Free, reusable components built with Next.js, Tailwind CSS, and ShadCN UI.",
+    year: 2024,
+    category: "frontend",
+    technologies: "Next.js, TypeScript, Tailwind CSS, ShadcnUI",
+    description:
+      "A modern and fully responsive free and reusable components shadcnui. Create stunning web interfaces with ready-to-use components.",
+    url: "https://shadcn-ui-nextjs-components.vercel.app/",
+  },
 ];
